@@ -9,6 +9,27 @@ app = Flask(__name__)
 @app.route('/news/latest', methods=['GET'])
 def get_latest_news():
     # Get latest news from data source
+    # Get latest news articles from database
+    session = Session()
+    articles = session.query(Article).order_by(desc(Article.publishedAt)).limit(20).all()
+    session.close()
+
+    # Convert articles to JSON format
+    news_data = []
+    for article in articles:
+        article_data = {
+            'id': article.id,
+            'title': article.title,
+            'description': article.description,
+            'url': article.url,
+            'urlToImage': article.urlToImage,
+            'publishedAt': article.publishedAt.isoformat(),
+            'content': article.content
+        }
+        news_data.append(article_data)
+
+    # Return JSON response
+    return jsonify(news_data)
     # Process data
     # Return JSON response
     return jsonify(news_data)

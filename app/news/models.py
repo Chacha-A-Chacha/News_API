@@ -8,15 +8,19 @@ Base = declarative_base()
 
 class Article(Base):
     __tablename__: str = 'articles'
-    id = Column(Integer, primary_key=True)
-    title = Column(String)
-    description = Column(String)
-    url = Column(String, unique=True)
-    urlToImage = Column(String)
-    publishedAt = Column(DateTime)
-    content = Column(String)
 
+    id = db.Column(Integer, primary_key=True)
+    title = db.Column(String(255), nullable=False)
+    description = db.Column(String(255), nullable=False)
+    url = db.Column(String, unique=True)
+    urlToImage = db.Column(String)
+    publishedAt = db.Column(DateTime, nullable=False, default=datetime.utcnow)
+    content = db.Column(String)
 
+    def __repr__(self):
+        return f"<Article(id={self.id}, title='{self.title}', author='{self.author}', published_date='{self.published_date}')>"
+
+"""
 class NewsArticle(db.Model):
     id = Column(Integer, primary_key=True)
     title = Column(String)
@@ -36,3 +40,4 @@ def get_all_news():
 def get_news_by_id(article_id):
     article = NewsArticle.query.filter_by(id=article_id).first()
     return article.to_dict() if article else None
+"""
