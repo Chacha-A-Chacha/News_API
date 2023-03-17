@@ -21,4 +21,5 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 
 
-from app import views, models, utils
+from app import  utils
+from app.news import views, models
