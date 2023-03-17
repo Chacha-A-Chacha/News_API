@@ -22,6 +22,19 @@ class Article(Base):
         return f"<Article(id={self.id}, title='{self.title}', author='{self.author}', published_date='{self.published_date}')>"
 
 
+class Category(db.Model):
+    __tablename__ = 'categories'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False, unique=True)
+    articles = db.relationship('Article', secondary='article_category', backref='categories')
+
+
+article_category = db.Table('article_category',
+                            db.Column('article_id', db.Integer, db.ForeignKey('articles.id'), primary_key=True),
+                            db.Column('category_id', db.Integer, db.ForeignKey('categories.id'), primary_key=True))
+
+
 """
 class NewsArticle(db.Model):
     id = Column(Integer, primary_key=True)
