@@ -1,3 +1,4 @@
+#!/bin/env/python3
 from datetime import datetime
 from sqlalchemy import create_engine, Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
@@ -19,6 +20,7 @@ class Article(Base):
 
     def __repr__(self):
         return f"<Article(id={self.id}, title='{self.title}', author='{self.author}', published_date='{self.published_date}')>"
+
 
 """
 class NewsArticle(db.Model):

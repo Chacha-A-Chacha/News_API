@@ -1,3 +1,4 @@
+#!/bin/env/python3
 from flask import Flask, jsonify, request
 import requests
 
@@ -8,7 +9,6 @@ app = Flask(__name__)
 
 @app.route('/news/latest', methods=['GET'])
 def get_latest_news():
-    # Get latest news from data source
     # Get latest news articles from database
     session = Session()
     articles = session.query(Article).order_by(desc(Article.publishedAt)).limit(20).all()

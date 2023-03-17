@@ -1,3 +1,4 @@
+#!/bin/env/python3
 """Flask-SQLAlchemy Configuration"""
 
 import os
