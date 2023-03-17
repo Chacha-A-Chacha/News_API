@@ -1,7 +1,7 @@
 #!/bin/env/python3
 
 from app import db
-from app.models import Article, Category
+from app.news.models import Article, Category
 import requests
 import re
 from datetime import datetime
