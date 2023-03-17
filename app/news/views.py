@@ -96,5 +96,3 @@ def get_sources():
     return jsonify(sources_data)
 
 
-if name == 'main':
-    app.run(debug=True)
