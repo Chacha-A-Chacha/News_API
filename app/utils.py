@@ -7,50 +7,48 @@ import re
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-news_sources = {
-    "General News": {
-        "BBC News": "http://www.bbc.com/news/",
-        "CNN": "http://www.cnn.com/",
-        "Reuters": "http://www.reuters.com/",
-        "The New York Times": "https://www.nytimes.com/",
-        "The Guardian": "https://www.theguardian.com/"
-    },
-    "Technology News": {
-        "TechCrunch": "https://techcrunch.com/",
-        "Wired": "https://www.wired.com/",
-        "The Verge": "https://www.theverge.com/",
-        "Engadget": "https://www.engadget.com/",
-        "CNET": "https://www.cnet.com/"
-    },
-    "Sports News": {
-        "ESPN": "http://www.espn.com/",
-        "BBC Sport": "http://www.bbc.com/sport",
-        "Sky Sports": "https://www.skysports.com/",
-        "NBC Sports": "https://www.nbcsports.com/",
-        "Sports Illustrated": "https://www.si.com/"
-    },
-    "Business News": {
-        "Bloomberg": "https://www.bloomberg.com/",
-        "Forbes": "https://www.forbes.com/",
-        "The Wall Street Journal": "https://www.wsj.com/",
-        "Financial Times": "https://www.ft.com/",
-        "CNBC": "https://www.cnbc.com/"
+
+def scrape_news_articles():
+    news_sources = {
+        "General News": {
+            "BBC News": "http://www.bbc.com/news/",
+            "CNN": "http://www.cnn.com/",
+            "Reuters": "http://www.reuters.com/",
+            "The New York Times": "https://www.nytimes.com/",
+            "The Guardian": "https://www.theguardian.com/"
+        },
+        "Technology News": {
+            "TechCrunch": "https://techcrunch.com/",
+            "Wired": "https://www.wired.com/",
+            "The Verge": "https://www.theverge.com/",
+            "Engadget": "https://www.engadget.com/",
+            "CNET": "https://www.cnet.com/"
+        },
+        "Sports News": {
+            "ESPN": "http://www.espn.com/",
+            "BBC Sport": "http://www.bbc.com/sport",
+            "Sky Sports": "https://www.skysports.com/",
+            "NBC Sports": "https://www.nbcsports.com/",
+            "Sports Illustrated": "https://www.si.com/"
+        },
+        "Business News": {
+            "Bloomberg": "https://www.bloomberg.com/",
+            "Forbes": "https://www.forbes.com/",
+            "The Wall Street Journal": "https://www.wsj.com/",
+            "Financial Times": "https://www.ft.com/",
+            "CNBC": "https://www.cnbc.com/"
+        }
     }
-}
 
+    def get_news_links(news_sources):
+        links = []
+        for category, sources in news_sources.items():
+            for source in sources:
+                links.append(source)
+        return links
 
-def get_news_links(news_sources):
-    links = []
-    for category, sources in news_sources.items():
-        for source in sources:
-            links.append(source)
-    return links
+    urls = get_news_links(news_sources)
 
-
-urls = get_news_links(news_sources)
-
-
-def scrape_news_articles(urls):
     """
     Scrapes news articles from a list of URLs and returns the article titles, category, content, URLs, article date and image urls as a list of dictionaries.
     """
@@ -90,7 +88,10 @@ def scrape_news_articles(urls):
             img_url = image_element.get('content')
 
         # Add the article data to the list of dictionaries
-        article_data.append({'title': title, 'category': category, 'content': content, 'url': url, 'date': date, 'img_url': img_url})
+        article_data.append({
+                'title': title, 'category': category, 'content': content, 'url': url, 'date': date, 'img_url': 'img_url'
+            }
+        )
 
     return article_data
 
@@ -123,7 +124,7 @@ def clean_news_data(article_data):
             'content': content,
             'url': url,
             'date': date,
-            'image_url': image_url
+            'img_url': image_url
         })
 
     return cleaned_data
@@ -151,7 +152,7 @@ def scrape_and_store_data():
         article = Article(title=article_data['title'],
                           author=article_data['author'],
                           content=article_data['content'],
-                          image_url=article_data['image_url'],
+                          image_url=article_data['img_url'],
                           published_at=article_data['published_at'],
                           category=category)
         db.session.add(article)
@@ -162,7 +163,7 @@ def scrape_and_store_data():
         article = Article(title=article_data['title'],
                           author=article_data['author'],
                           content=article_data['content'],
-                          image_url=article_data['image_url'],
+                          image_url=article_data['img_url'],
                           published_at=article_data['published_at'])
         db.session.add(article)
 
