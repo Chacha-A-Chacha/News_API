@@ -1,6 +1,6 @@
 #!/bin/env/python3
 
-from app import db
+# from app import db
 from app.news.models import Article, Category
 import requests
 import re
@@ -94,6 +94,7 @@ def scrape_news_articles():
         )
 
     return article_data
+
 
 def clean_news_data(article_data):
     cleaned_data = []
