@@ -1,11 +1,12 @@
 #!/bin/env/python3
 
-# from app import db
-from app.news.models import Article, Category
+from app import db
+from news.models import Article, Category
+from bs4 import BeautifulSoup
 import requests
 import re
 from datetime import datetime
-from bs4 import BeautifulSoup
+
 
 
 def scrape_news_articles():
@@ -44,8 +45,10 @@ def scrape_news_articles():
         links = []
         for category, sources in news_sources.items():
             for source in sources:
-                links.append(source)
+                links.append(sources[source])
         return links
+
+    urls = get_news_links(news_sources)
 
     urls = get_news_links(news_sources)
 

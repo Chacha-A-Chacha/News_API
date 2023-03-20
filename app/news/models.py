@@ -1,6 +1,6 @@
 #!/bin/env/python3
 from datetime import datetime
-from sqlalchemy import create_engine, Column, Integer, String, DateTime
+from flask_sqlalchemy import create_engine, Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from app import db
 
