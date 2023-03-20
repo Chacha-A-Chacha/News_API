@@ -50,8 +50,6 @@ def scrape_news_articles():
 
     urls = get_news_links(news_sources)
 
-    urls = get_news_links(news_sources)
-
     """
     Scrapes news articles from a list of URLs and returns the article titles, category, content, URLs, article date and image urls as a list of dictionaries.
     """
@@ -136,7 +134,7 @@ def clean_news_data(article_data):
 
 def scrape_and_store_data():
     # Scrape news data from source
-    news_data = scrape_news_articles(urls)
+    news_data = scrape_news_articles()
 
     # Process and clean data
     cleaned_data = clean_news_data(news_data)
