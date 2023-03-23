@@ -82,12 +82,12 @@ The News API project involves designing and building an application programming 
 
 ```
 ## Endpoints 
--The `home()` route returns a JSON response with the published articles. 
--The `headlines()` route returns a JSON response with the top headlines. 
--The `articles()` route returns a JSON response with random articles. 
--The `sources()` route returns a plain text response with the news sources.
+- The `home()` route returns a JSON response with the published articles. 
+- The `headlines()` route returns a JSON response with the top headlines. 
+- The `articles()` route returns a JSON response with random articles. 
+- The `sources()` route returns a plain text response with the news sources.
 
--The `business()`, `tech()`, `entertainment()`, `science()`, `sports()`, and` health()` routes each return a JSON response 
+- The `business()`, `tech()`, `entertainment()`, `science()`, `sports()`, and` health()` routes each return a JSON response 
     with articles related to their respective categories.
 
 
