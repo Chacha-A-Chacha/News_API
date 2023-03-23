@@ -1138,9 +1138,6 @@
       <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/assets/img/screenshot.PNG" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1358,7 +1355,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679526501441</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="error handling">
+      <created>1679597905179</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1679597905179</updated>
+    </task>
+    <task id="LOCAL-00023" summary="readme file">
+      <created>1679598017451</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679598017451</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -1379,6 +1390,8 @@
     <MESSAGE value="global scope variables" />
     <MESSAGE value="requests not working" />
     <MESSAGE value="rework ing" />
-    <option name="LAST_COMMIT_MESSAGE" value="rework ing" />
+    <MESSAGE value="error handling" />
+    <MESSAGE value="readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme file" />
   </component>
 </project>
