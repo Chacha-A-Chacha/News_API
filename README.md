@@ -81,21 +81,20 @@ The News API project involves designing and building an application programming 
 ]
 
 ```
-## Requirements
-The user can perform the following functions:
+## Endpoints 
+-The `home()` route returns a JSON response with the published articles. 
+-The `headlines()` route returns a JSON response with the top headlines. 
+-The `articles()` route returns a JSON response with random articles. 
+-The `sources()` route returns a plain text response with the news sources.
 
-- See various news sources on the homepage of the application
-- Select a news source and see all news articles from the selected news source in the application.
-- See the image, description and the time a news article was created.
-- Click on an article and read the full article on the source website.
+-The `business()`, `tech()`, `entertainment()`, `science()`, `sports()`, and` health()` routes each return a JSON response 
+    with articles related to their respective categories.
+
+
 
 
 ## Technologies
 - python 3.11
 
-
-
-
-## Contact Information
 
 
