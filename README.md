@@ -1,7 +1,7 @@
 # News_API
 The News API project involves designing and building an application programming interface (API) that can retrieve news articles and related information from various sources and deliver them to users through a standardized interface
 
-![](/Flask-News-App/blob/master/app/static/assets/img/screenshot.PNG)
+![](/app/static/assets/img/screenshot.PNG)
 
 ## Requirements
 The user can perform the following functions:
