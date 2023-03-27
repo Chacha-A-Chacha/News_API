@@ -6,7 +6,7 @@ from .request import businessArticles, entArticles, get_news_source, healthArtic
 def home():
     articles = publishedArticles()
 
-    render_template('home.html', articles = )
+    render_template('home.html', articles=articles)
     return jsonify(articles) 
 
 @app.route('/headlines')

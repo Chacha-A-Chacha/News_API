@@ -1138,7 +1138,7 @@
       <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -1413,11 +1413,17 @@
       <option name="project" value="LOCAL" />
       <updated>1679606562739</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="rendering html">
+      <created>1679897900221</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1679897900221</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated example structure" />
     <MESSAGE value="flask forms start" />
     <MESSAGE value="refactor" />
     <MESSAGE value="setting up db" />
@@ -1442,6 +1448,7 @@
     <MESSAGE value="functions" />
     <MESSAGE value="A news API that produces JSON objects typically follows a RESTful architecture, where HTTP requests are used to retrieve news data in JSON format." />
     <MESSAGE value="A news API :" />
-    <option name="LAST_COMMIT_MESSAGE" value="A news API :" />
+    <MESSAGE value="rendering html" />
+    <option name="LAST_COMMIT_MESSAGE" value="rendering html" />
   </component>
 </project>
